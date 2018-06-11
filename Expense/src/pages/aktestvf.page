@@ -1,0 +1,72 @@
+<apex:page controller="aktest">
+    <apex:form >
+    <apex:pageBlock >
+       <apex:pageBlockTable value="{!mylist}" var="a">
+           <apex:column headerValue="Name" value="{!a.name}"/>
+            <apex:column headerValue="Age"  value="{!a.age}"/>
+           <apex:column headerValue="Contact" value="{!a.phno}"/>
+        </apex:pageBlockTable> 
+        </apex:pageBlock>
+        <apex:pageBlock >
+        <apex:pageBlockTable value="{!myset1}" var="x">
+            <apex:column value="{!x}"/>
+            <!--<apex:column value="{!x.name}"/>
+            <apex:column value="{!x.age}"/>
+            <apex:column value="{!x.phno}"/>-->
+            
+            
+            
+            </apex:pageBlockTable>
+        
+        
+        </apex:pageBlock>
+        <apex:pageBlock >
+        <apex:dataList value="{!myset}" var="b">
+        {!b}          
+        </apex:dataList>          
+        </apex:pageBlock>
+		<apex:pageBlock >
+         <apex:selectList size="1" value="{!myval}">
+        <apex:selectOptions value="{!myoption}"></apex:selectOptions>
+             <apex:actionSupport event="onchange" reRender="one"/>
+        </apex:selectList>
+        <apex:outputLabel id="one"> selected option is{!myval}</apex:outputLabel>
+    	</apex:pageBlock>
+    	<apex:pageBlock >
+        <apex:repeat value="{!mymap}" var="a">
+            <apex:outputText value="{!a}"/>
+            <apex:outputText value="{!mymap[a]}"/> <br/>
+           </apex:repeat>   
+         </apex:pageBlock>
+    
+        <apex:pageBlock >
+        <apex:repeat value="{!maplist}" var="b">
+            <apex:outputText value="{!b}"/>
+            <apex:outputText value="{!maplist[b]}"/><br/>
+            
+            </apex:repeat>
+        
+        </apex:pageBlock>
+        
+        <apex:pageBlock >
+        <apex:pageBlockSection columns="1" title="Simple Operation" collapsible="true">
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel >Enter the value of x</apex:outputLabel>
+            <apex:inputText value="{!x}"/>
+      	</apex:pageBlockSectionItem> 
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel >Enter the value of y</apex:outputLabel>
+            <apex:inputText value="{!y}"/>
+            </apex:pageBlockSectionItem>
+            
+    </apex:pageBlockSection> 
+           
+            <apex:commandButton value="Add" reRender="one" action="{!add}"/>
+          	<apex:outputLabel id="one">Addition={!result}</apex:outputLabel>  
+             
+            <apex:commandButton value="Subtact" reRender="two" action="{!sub}"/>
+            <apex:outputLabel id="two">Subtaction={!result}</apex:outputLabel>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

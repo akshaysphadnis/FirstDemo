@@ -1,0 +1,9 @@
+<apex:page standardController="Account" extensions="Accountexist">
+    <apex:form >
+     <apex:inputtext value="{!myname}"/>
+	<apex:commandButton value="Check" action="{!show}" />
+        <apex:pageMessages />
+        <apex:commandButton rendered="{!rend}" value="insert" action="{!ins}"/>
+ </apex:form>    
+    
+</apex:page>

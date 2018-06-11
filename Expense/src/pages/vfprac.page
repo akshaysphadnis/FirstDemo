@@ -1,0 +1,27 @@
+<apex:page standardController="Account" tabStyle="Account" recordSetVar="items">
+    <apex:sectionHeader title="Account" subtitle="Home" help="www.google.com"/>
+    <apex:form >
+    <apex:outputLabel >View:</apex:outputLabel>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <apex:selectList size="1" value="{!filterid}">
+    <apex:selectOptions value="{!listviewoptions}"/>
+  	<apex:actionSupport event="onchange" reRender="ak"/>
+    </apex:selectList>
+	<apex:pageBlock title="Recent Accounts" id="ak">
+    <apex:pageBlockButtons location="top">
+    <apex:commandButton value="New" action="{!create}"/>    
+    <span style="float:right">
+    <apex:selectList size="1">
+        <apex:selectOption itemLabel="Recently Viewed" itemValue="one"/>   
+        <apex:selectOption itemLabel="Recently Created" itemValue="two"></apex:selectOption>
+        <apex:selectOption itemLabel="Recently Modified" itemValue="three"></apex:selectOption>
+        </apex:selectList>   
+        </span>    
+        </apex:pageBlockButtons>    
+       
+        <apex:pageBlockTable value="{!items}" var="a" rows="5">
+        <apex:column value="{!a.name}"/>
+        </apex:pageBlockTable>
+    	 </apex:pageBlock>
+        </apex:form>
+    </apex:page>

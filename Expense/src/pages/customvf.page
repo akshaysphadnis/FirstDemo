@@ -1,0 +1,14 @@
+<apex:page standardController="Candidate__c" extensions="custom">
+ <apex:form >
+ <apex:pageBlock title="Recruting" tabStyle="Account" >
+<apex:pageBlockSection title="Candidate Information">
+<apex:inputText id="Firstname" value="{!can.FirstName__c}"/>  
+<apex:inputText id="Lastname" value="{!can.LastName__c}"/>  
+<apex:inputText id="City" value="{!can.City__c}"/>
+<apex:inputText id="Country" value="{!can.Country__c}"/>
+<apex:inputText id="Email" value="{!can.Email__c}"/>
+<apex:commandButton action="{!save}" value="save"/>
+</apex:pageBlockSection>     
+</apex:pageBlock>
+</apex:form>
+</apex:page>

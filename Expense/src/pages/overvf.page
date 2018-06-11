@@ -1,0 +1,25 @@
+<apex:page controller="over">
+ <apex:form >
+    <apex:pageBlock >
+     <apex:pageBlockTable value="{!result}" var="a">
+         <apex:column value="{!a.name}"/>
+         <apex:column value="{!a.age}"/>      
+        </apex:pageBlockTable> 
+     </apex:pageBlock>
+    <apex:pageBlock >
+     
+         <apex:dataList value="{!st}" var="ak">{!ak}
+             </apex:dataList>        
+       </apex:pageBlock>
+    <apex:pageBlock >
+     <apex:selectList size="1">
+        <apex:selectOptions value="{!City}"></apex:selectOptions>
+        </apex:selectList>
+     
+     
+     </apex:pageBlock>
+    
+    
+    </apex:form>   
+    
+</apex:page>

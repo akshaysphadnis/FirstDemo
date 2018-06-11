@@ -1,0 +1,26 @@
+<apex:page controller="wrapmain">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockButtons >
+<apex:commandButton value="click" action="{!selected}"/>    
+</apex:pageBlockButtons>    
+<apex:pageBlockSection >
+<apex:pageBlockTable value="{!wraplist}" var="x">
+    <apex:column >
+      <apex:inputCheckbox value="{!x.selected}"/>
+    </apex:column>
+    <apex:column value="{!x.ac.name}"/>
+    <apex:column value="{!x.ac.industry}"/>
+</apex:pageBlockTable>
+<apex:pageBlockTable value="{!listacc}" var="y">
+<apex:column value="{!y.name}"/>    
+<apex:column value="{!y.industry}"/>    
+    
+</apex:pageBlockTable>
+    
+</apex:pageBlockSection>   
+    
+    
+</apex:pageBlock>    
+</apex:form>    
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page Controller="pracpageclass" showHeader="true" sidebar="true">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection title="Account" columns="2">
+<apex:inputField value="{!acc.name}"/>    
+</apex:pageBlockSection>
+    <apex:pageBlockButtons >
+    <apex:commandButton value="Save" action="{!save}" />
+    </apex:pageBlockButtons>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

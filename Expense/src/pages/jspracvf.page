@@ -1,0 +1,18 @@
+<apex:page controller="jsprac">
+    <apex:form >
+    <script>
+        function closeWin()
+        {
+        	window.top.close();
+            
+        }
+     </script>
+    <apex:outputText value="{!callclose}" escape="false"></apex:outputText>
+      <apex:commandButton value="close" action="{!close}">
+        </apex:commandButton>
+        
+        
+    
+    
+    </apex:form>
+</apex:page>

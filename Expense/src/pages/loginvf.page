@@ -1,0 +1,14 @@
+<apex:page standardController="Registration__c" extensions="login">
+<apex:form >
+<center>
+<apex:pageBlock title="Registration form"> 
+	<apex:outputLabel >UserName</apex:outputLabel>&nbsp;&nbsp;&nbsp;
+	<apex:inputText value="{!Registration__c.name}"/><br/><br/>
+	<apex:outputLabel >Password</apex:outputLabel>&nbsp;&nbsp;&nbsp;
+    <apex:inputText value="{!Registration__c.Password__c}"/><br/><br/>
+    <apex:commandButton value="Login" action="{!show}"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <apex:commandButton value="Register" action="{!ak}"/>    
+</apex:pageBlock>    
+</center>    
+</apex:form>    
+</apex:page>

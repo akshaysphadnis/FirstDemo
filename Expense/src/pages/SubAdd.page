@@ -1,0 +1,30 @@
+<apex:page controller="AddSub">
+    <apex:form >
+    <apex:pageBlock title="calulator">
+    <apex:pageBlockSection columns="1" title="simple operation" collapsible="true">
+      <apex:pageBlockSectionItem >  
+          <apex:outputPanel >
+    <apex:outputLabel >Enter the value of A</apex:outputLabel>
+    <apex:inputText value="{!a}"/>
+              </apex:outputPanel>
+    </apex:pageBlockSectionItem>
+  	<apex:pageBlockSectionItem > 
+    <apex:outputPanel >   
+    <apex:outputLabel >Enter the value of B</apex:outputLabel>
+    <apex:inputText value="{!b}"/>
+        </apex:outputPanel>
+     </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:outputPanel >
+        <apex:commandButton value="Add" action="{!add}" reRender="one"/>
+        <apex:commandButton value="Sub" action="{!sub}" reRender="two"/>
+     <apex:outputLabel id="one">Addition={!c}</apex:outputLabel>
+     <apex:outputLabel id="two">Subtraction={!c}</apex:outputLabel>
+    </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+       
+   
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

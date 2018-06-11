@@ -1,0 +1,22 @@
+<apex:page controller="Addition">
+<apex:form >
+<apex:pageBlock title="Calculator">
+<apex:pageBlockSection columns="2">
+<apex:pageBlockSectionItem >
+<apex:outputLabel >Enter num1 </apex:outputLabel>
+<apex:inputText value="{!num1}"/>
+</apex:pageBlockSectionItem>
+ <apex:pageBlockSectionItem >
+ <apex:outputLabel >enter num2 </apex:outputLabel>
+ <apex:inputText value="{!num2}"/>   
+ </apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >   
+<apex:outputLabel id="ad">The Sum of the {!num1} and {!num2} is {!result} </apex:outputLabel>
+<apex:outputLabel id="sub">the subtraction of {!num1} and {!num2} is {!result}</apex:outputLabel>    
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>      
+<apex:commandButton value="Add" action="{!add}" reRender="ad"/>
+<apex:commandButton value="Sub" action="{!sub}" reRender="sub"/>
+ </apex:pageBlock>      
+</apex:form>
+</apex:page>

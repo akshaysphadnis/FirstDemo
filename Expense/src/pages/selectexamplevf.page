@@ -1,0 +1,15 @@
+<apex:page controller="selectexample">
+    <apex:form >
+    <apex:selectCheckboxes value="{!countries}">
+        <apex:selectOptions value="{!items}"/>
+        </apex:selectCheckboxes><br/>
+    <apex:commandButton value="Test" action="{!test}" rerender="out" status="Status"/>
+    </apex:form>
+    
+    <apex:outputPanel id="out">
+    
+    <apex:dataList value="{!countries}" var="c">
+        {!c}
+    </apex:dataList>
+        </apex:outputPanel>
+    </apex:page>

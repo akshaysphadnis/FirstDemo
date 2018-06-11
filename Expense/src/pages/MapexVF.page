@@ -1,0 +1,12 @@
+<apex:page controller="Mapex">
+    <apex:form >
+    <apex:selectList value="{!mycity}" size="1">
+    <apex:selectOptions value="{!city}"></apex:selectOptions>
+    <apex:actionSupport event="onchange" action="{!show}" reRender="one"/>
+        </apex:selectList>
+        <apex:selectList size="1" id="one">
+    	<apex:selectOptions value="{!branch}"> </apex:selectOptions>
+    	</apex:selectList>
+        
+    </apex:form>
+</apex:page>

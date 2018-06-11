@@ -1,0 +1,17 @@
+<apex:page id="pg">
+    <apex:form id="fm">
+        <apex:inputText id="one"/>
+        <script>
+        function show()
+        {
+            
+            var name=document.getElementById('{!$Component.one}').value;
+            alert(name);
+        }
+        </script>
+        
+        <apex:commandButton value="Click" onclick="show()"/>
+        
+    
+    </apex:form>
+</apex:page>

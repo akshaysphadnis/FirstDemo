@@ -1,0 +1,26 @@
+<apex:page controller="Listset">
+ <apex:pageBlock >   
+        
+        <apex:pageBlockTable value="{!num}" var="a"> 
+        <apex:column value="{!a}"/>
+        </apex:pageBlockTable>
+        <apex:pageBlockTable value="{!names}" var="b">
+        <apex:column value="{!b}"/>
+        
+        	
+        </apex:pageBlockTable>
+            <apex:outputLabel >{!test}</apex:outputLabel>
+        
+        <apex:dataList value="{!names}" var="c">
+            <apex:outputText value="{!c}"/>
+        </apex:dataList>
+     
+     <apex:outputLabel >{!s}</apex:outputLabel>
+  
+    
+        
+    
+    
+    
+    </apex:pageBlock>
+</apex:page>

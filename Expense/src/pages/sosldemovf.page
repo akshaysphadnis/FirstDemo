@@ -1,0 +1,40 @@
+<apex:page controller="sosldemo" >
+<apex:form >
+<apex:commandButton value="show record using sosl" action="{!sosl}"/>
+    <apex:pageBlock title="Accounts">
+        <apex:pageBlockTable value="{!acclist}" var="acc">
+		
+            <apex:column value="{!acc.name}"/>
+            <apex:column value="{!acc.type}"/>
+        
+        
+</apex:pageBlockTable>
+</apex:pageBlock>
+     <apex:pageBlock title="Contacts">
+        <apex:pageBlockTable value="{!conlist}" var="con">
+		<apex:column value="{!con.name}"/>
+            <apex:column value="{!con.email}"/>
+        
+        
+</apex:pageBlockTable>
+</apex:pageBlock>
+    
+        <apex:pageBlock title="Leads">
+        <apex:pageBlockTable value="{!leadlist}" var="l">
+		<apex:column value="{!l.name}"/>
+            <apex:column value="{!l.company}"/>
+        
+        
+</apex:pageBlockTable>
+</apex:pageBlock>
+    <apex:pageBlock title="Opportunities">
+        <apex:pageBlockTable value="{!oplist}" var="opp">
+		<apex:column value="{!opp.name}"/>
+            <apex:column value="{!opp.Stagename}"/>
+        
+        
+</apex:pageBlockTable>
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

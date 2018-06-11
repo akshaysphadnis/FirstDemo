@@ -1,0 +1,33 @@
+<apex:page standardController="Candidate__c" extensions="custom" showHeader="true"  sidebar="true" title="Recruiting">
+<apex:form >
+<apex:pageBlock title="Recruting" tabStyle="Account" >
+<apex:pageBlockSection title="Candidate Information">
+<apex:inputText id="Firstname" value="{!can.FirstName__c}"/>  
+    <apex:inputText id="Lastname" value="{!can.LastName__c}"/>  
+<apex:inputField id="City" value="{!can.City__c}"/>
+<apex:inputField id="Country" value="{!can.Country__c}"/>
+<apex:inputField id="Email" value="{!can.Email__c}"/>
+</apex:pageBlockSection>    
+</apex:pageBlock>
+<apex:pageBlock >
+<apex:pageBlockSection title="Position Information">
+<apex:inputField id="Name" value="{!pos.name}"/>  
+<apex:inputField id="Minpay" value="{!pos.name}"/>  
+<apex:inputField id="Maxpay" value="{!pos.name}"/>  
+ <apex:inputField id="Status" value="{!pos.Status__c}"/>
+ <apex:inputField id="Type" value="{!pos.Type__c}"/>
+ <apex:inputField id="FunctionalArea" value="{!pos.Functional_Area__c}"/>  
+ <apex:inputField id="Location" value="{!pos.Location__c}"/>   
+</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:pageBlock >
+<apex:pageBlockSection title="Job Application">
+    <apex:inputField id="Candidate" value="{!job.JobApplications__c}"/>
+<apex:inputField id="jobposition" value="{!job.JobApp__c}"/>
+    <apex:inputField id="jobemail" value="{!job.Email__c}"/>
+ 	 <apex:inputField id="jobstatus" value="{!job.Status__c}"/>
+</apex:pageBlockSection>        
+    <apex:commandButton action="{!save}" value="save"/>
+</apex:pageBlock>    
+</apex:form>
+</apex:page>

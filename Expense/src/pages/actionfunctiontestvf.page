@@ -1,0 +1,27 @@
+<apex:page controller="actionfunctiontest" >
+    <apex:form >
+        <!-- <apex:actionFunction name="myactionfun"  action="{!getAccount}" reRender="pgBlock,pbSection" />-->
+      <apex:pageBlock title="Test Action Function ">
+          <apex:pageblockSection >
+              <apex:inputText value="{!dummyString}" >
+                  <apex:actionSupport event="onchange" action="{!getAccount}" reRender="pgBlock, pbSection" />
+              </apex:inputText>
+          </apex:pageblockSection>
+        </apex:pageBlock>
+        
+        <apex:pageblock title="Output of Action Funtion" id="pgBlock">
+          <apex:pageblockSection id="pbSection" >
+              <apex:pageBlockTable value="{!acclist}" var="q">
+              <apex:column value="{!q.id}"/>
+              <apex:column value="{!q.name}"/>
+              
+              </apex:pageBlockTable>
+          </apex:pageblockSection>
+      </apex:pageblock>
+    
+    
+    
+    
+    
+    </apex:form>
+</apex:page>

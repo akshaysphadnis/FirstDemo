@@ -1,0 +1,20 @@
+<apex:page controller="StudentList">
+   <apex:form >
+    <apex:pageBlock title="">
+       <apex:pageBlockTable value="{!result}" var="a">
+           <apex:outputLabel value="Name"></apex:outputLabel>
+           <apex:column value="{!a.name}" />
+			<apex:column value="{!a.age}" />        
+        
+        
+        </apex:pageBlockTable>
+       
+       
+       
+       
+       </apex:pageBlock>
+    
+    
+    </apex:form> 
+    
+</apex:page>

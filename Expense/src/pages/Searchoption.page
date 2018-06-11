@@ -1,0 +1,17 @@
+<apex:page standardController="Account" extensions="Searchoptionclass">
+    <apex:form >
+        
+    <apex:pageBlock >
+    <apex:pageBlockSection >
+    <apex:inputText value="{!str}"/>    
+          
+    <apex:pageBlockTable value="{!acclist}" var="ak" rendered="true" >
+    <apex:column value="{!ak.name}"/>
+    <apex:column value="{!ak.industry}"/>
+    </apex:pageBlockTable>
+ 	</apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:commandButton value="Search" action="{!show}" />   
+         
+   </apex:form>
+</apex:page>

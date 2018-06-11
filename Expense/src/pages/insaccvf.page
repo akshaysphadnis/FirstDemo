@@ -1,0 +1,8 @@
+<apex:page controller="insacc">
+    <apex:form >
+    <apex:commandButton value="click" action="{!show}"/>
+    
+    
+    
+    </apex:form>
+</apex:page>

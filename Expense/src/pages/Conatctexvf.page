@@ -1,0 +1,6 @@
+<apex:page standardController="Contact" extensions="Contactex">
+    
+    <apex:outputText value="{!contact.Account.BillingState}"/>>
+    
+ 
+</apex:page>

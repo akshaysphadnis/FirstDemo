@@ -1,0 +1,14 @@
+<apex:page controller="Contactsql">
+    <apex:form >
+    <apex:pageBlock rendered="{!Not(ISNULL(Con))}">
+        <apex:pageBlockTable value="{!con}" var="a">
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.Account.name}"/>
+            <apex:column value="{!a.Account.industry}"/>
+        
+        </apex:pageBlockTable>       
+               
+        </apex:pageBlock>  
+    <apex:commandButton value="click" action="{!show}"/>
+    </apex:form>
+</apex:page>

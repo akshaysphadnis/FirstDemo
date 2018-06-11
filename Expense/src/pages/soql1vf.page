@@ -1,0 +1,9 @@
+<apex:page controller="soql1" >
+<apex:form >
+	<apex:pageBlock >
+ 	<apex:pageBlockTable value="{!con}" var="a">
+    </apex:pageBlockTable>
+   	</apex:pageBlock>  
+    <apex:commandButton value="Click" action="{!show}"/>
+</apex:form>
+</apex:page>

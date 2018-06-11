@@ -1,0 +1,24 @@
+<apex:page controller="Wrappermainclass">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockButtons >
+<apex:commandButton value="click" action="{!selectedacc}" reRender="x"/>    
+</apex:pageBlockButtons>    
+<apex:pageBlockSection >
+<apex:pageBlockTable value="{!wrapperlist}" var="a">
+<apex:column >
+<apex:inputCheckbox value="{!a.selected}"/>
+</apex:column>
+<apex:column value="{!a.acc.name}"/>
+<apex:column value="{!a.acc.industry}"/>
+</apex:pageBlockTable>    
+<apex:pageBlockTable value="{!acclist}" var="b" id="x">
+<apex:column value="{!b.name}"/>
+<apex:column value="{!b.industry}"/>
+    
+    
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+</apex:pageBlock>    
+</apex:form>    
+</apex:page>

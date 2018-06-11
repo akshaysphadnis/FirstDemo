@@ -1,0 +1,48 @@
+<apex:page controller="soslprac">
+    <apex:form >
+    <apex:commandButton value="Click" action="{!sosl}"/>
+        <apex:pageBlock title="accounts">
+        <apex:pageBlockTable value="{!acc}" var="a" >
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.type}"/>
+            <apex:column value="{!a.id}"/>
+            
+            
+            
+            </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+    
+    <apex:pageBlock title="Contacts">
+        <apex:pageBlockTable value="{!con}" var="b" >
+            <apex:column value="{!b.name}"/>
+            <apex:column value="{!b.email}"/>
+            
+            
+            
+            </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+    <apex:pageBlock title="Opportunity">
+        <apex:pageBlockTable value="{!opp}" var="c" >
+            <apex:column value="{!c.name}"/>          
+            
+            </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+    <apex:pageBlock title="Lead">
+        <apex:pageBlockTable value="{!led}" var="d" >
+            <apex:column value="{!d.Company}"/>
+            <apex:column value="{!d.name}"/>
+          
+            
+            
+            
+            </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+    
+    
+    
+    </apex:form>
+</apex:page>

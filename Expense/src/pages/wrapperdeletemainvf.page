@@ -1,0 +1,23 @@
+<apex:page controller="wrapperdeletemain">
+<apex:form >
+<apex:pageBlock >
+<apex:commandButton value="click" action="{!selectedmethod}"/>        
+<apex:pageBlockSection >
+<apex:pageBlockTable value="{!wrapperlist}" var="x" title="accounts to see">
+<apex:column >
+<apex:inputCheckbox value="{!x.selected}"/>  
+</apex:column>   
+<apex:column value="{!x.a.name}"/>
+<apex:column value="{!x.a.industry}"/>    
+</apex:pageBlockTable>    
+</apex:pageBlockSection>
+ <apex:pageBlockSection title="Deleted account">   
+<apex:pageBlockTable value="{!listacc}" var="y" id="dl" >
+<apex:column value="{!y.name}"/>    
+<apex:column value="{!y.industry}"/>    
+</apex:pageBlockTable>
+</apex:pageBlockSection>    
+      
+</apex:pageBlock>    
+</apex:form>
+ </apex:page>

@@ -1,0 +1,19 @@
+<apex:page standardController="contact" recordSetVar="items" sidebar="false">
+    <apex:form >
+       <apex:stylesheet value="{!$Resource.akcss}"/>
+        
+        <div>
+            <div class="recent">
+                <apex:outputLabel style="font-size:20px;">Recent items</apex:outputLabel>
+            </div>
+       <div class="one">
+           <apex:dataTable value="{!items}" var="a" rows="5" first="3">
+           <apex:column >
+               
+           <apex:commandLink value="{!a.name}"/>
+               </apex:column>
+           </apex:dataTable>
+            </div> 
+     </div> 
+    </apex:form>
+</apex:page>

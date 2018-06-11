@@ -1,0 +1,25 @@
+<apex:page standardController="Account" extensions="task2">
+<apex:form >
+<apex:pageBlock >
+<apex:outputLabel >Search Account</apex:outputLabel>
+<apex:inputField value="{!acc.Parentid}"/>
+<apex:commandButton value="go" action="{!show}"/>    
+</apex:pageBlock>   
+<apex:pageBlock >
+<apex:tabPanel switchType="Client" selectedTab="one" id="TabPanel"> 
+<apex:tab label="Contact" name="Contact" id="tabOne">
+<apex:pageBlockTable value="{!con}" var="a">
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.Account.name}"/>        
+</apex:pageBlockTable>    
+</apex:tab>    
+<apex:tab label="Opportunity" name="Opportunity" id="tabTwo">
+<apex:pageBlockTable value="{!opp}" var="b">
+<apex:column value="{!b.name}"/>
+<apex:column value="{!b.Account.name}"/>    
+</apex:pageBlockTable>    
+</apex:tab>  
+</apex:tabPanel>   
+</apex:pageBlock>
+</apex:form>
+</apex:page>

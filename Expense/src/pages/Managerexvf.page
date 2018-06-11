@@ -1,0 +1,21 @@
+<apex:page controller="Managerex" >
+<apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockTable value="{!result}" var="b">
+        <apex:column headerValue="Name" value="{!b.name}"/>
+        <apex:column headerValue="Phone Number" value="{!b.phno}"/>
+        
+        
+        </apex:pageBlockTable>
+     
+    </apex:pageBlock>  
+    <apex:selectList size="1" value="{!myval}">
+         <apex:actionSupport event="onchange" reRender="one"/>
+        <apex:selectOptions value="{!mylist}"></apex:selectOptions>
+        
+        
+        </apex:selectList>
+         <apex:outputLabel id="one">{!myval}</apex:outputLabel>
+    </apex:form>
+
+</apex:page>

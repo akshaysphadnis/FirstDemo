@@ -1,0 +1,13 @@
+<apex:page standardController="Account" showHeader="false">
+<apex:image url="{!$Resource.Banklogo}" width="150" height="150"/>     
+<apex:form >
+<apex:pageBlock >
+<apex:tabPanel switchType="Client" id="tabpanel"> 
+<apex:tab label="Product" name="Product" id="tabone">
+</apex:tab>
+</apex:tabPanel>   
+    
+    
+</apex:pageBlock>       
+</apex:form>   
+</apex:page>

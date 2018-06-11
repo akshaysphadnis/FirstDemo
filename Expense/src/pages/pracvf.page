@@ -1,0 +1,15 @@
+<apex:page controller="prac" >
+    <apex:form >
+        <apex:commandButton value="Click" action="{!show}"/> 
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!Job}" var="a">
+        <apex:column value="{!a.Position_Title__c}"/>
+         <apex:column value="{!a.Status__c}"/>  
+            
+        
+        
+        
+        </apex:pageBlockTable>
+        </apex:pageBlock>  
+    </apex:form>
+    </apex:page>

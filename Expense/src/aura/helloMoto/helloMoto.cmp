@@ -1,0 +1,5 @@
+<aura:component >
+    
+    <p><h1>Lightning Component</h1></p>
+	
+</aura:component>

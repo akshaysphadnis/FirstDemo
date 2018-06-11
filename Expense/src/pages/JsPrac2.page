@@ -1,0 +1,23 @@
+<apex:page >
+ <apex:form >
+ 
+  <apex:outputLabel >Enter Username</apex:outputLabel>   
+  <apex:inputText id="itus"/>   
+  <apex:outputLabel >Enter Password</apex:outputLabel>   
+  <apex:inputText id="itpw"/>   
+  <apex:commandButton value="login" onclick="show()"/>   
+  
+     <script>
+     function show()
+     {
+     		var user=document.getElementById('{!$Component.itus}').value;
+     		var Password=document.getElementById('{!$Component.itpw}').value;	
+			
+         if(user=='ak'&&Password=='ak')
+             alert('Login Success');
+         else
+             alert('Incorrect');
+     }
+     </script>
+ </apex:form>   
+</apex:page>

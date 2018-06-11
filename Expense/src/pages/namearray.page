@@ -1,0 +1,9 @@
+<apex:page controller="namearray">
+ <apex:pageBlock >
+ <apex:pageBlockTable value="{!myval}" var="a">
+ <apex:column value="{!a}"/>
+     
+     
+</apex:pageBlockTable>   
+</apex:pageBlock>     
+</apex:page>

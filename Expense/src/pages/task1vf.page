@@ -1,0 +1,18 @@
+<apex:page controller="task1">
+    <apex:form >
+    <apex:commandButton value="Click" action="{!show}"/>
+     <apex:pageBlock >
+     <apex:pageBlockTable value="{!acc}" var="a">
+      <apex:column value="{!a.name}"/>
+         <apex:column value="{!a.CreatedById}"/>
+         
+         
+         
+         
+         </apex:pageBlockTable>   
+        
+        
+        
+        </apex:pageBlock>
+	</apex:form>
+    </apex:page>

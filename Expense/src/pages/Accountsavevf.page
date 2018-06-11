@@ -1,0 +1,20 @@
+<apex:page controller="Accountsave">
+<apex:form >
+ 
+<apex:inputText value="{!inp}"/ >
+<apex:commandButton value="Search" action="{!Search}"  reRender="md,pb" />    
+<apex:pageBlock title="Account name" id="pb" >
+    
+<apex:pageBlockSection >
+<apex:pageBlockTable value="{!acc}" var="a" >
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.industry}"/>    
+</apex:pageBlockTable>
+</apex:pageBlockSection>  
+   
+</apex:pageBlock> 
+<apex:pageMessages id="md"></apex:pageMessages>
+   
+
+</apex:form>
+</apex:page>

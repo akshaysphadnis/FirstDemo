@@ -1,0 +1,18 @@
+<apex:page standardController="Account">
+ 
+ <apex:pageBlock title="{!$User.FirstName}">
+ <apex:outputLabel >you are displaying values of account {!account.name} and seperate contact that is specified</apex:outputLabel>       
+ </apex:pageBlock>   
+ <apex:pageBlock title="Contact">
+ <apex:dataTable value="{!account.contacts}" var="a" cellpadding="4" border="1">
+  <apex:column >
+  <apex:facet name="header">Name</apex:facet>   
+  {!a.name} 
+  </apex:column>
+  <apex:column >
+  <apex:facet name="header">Phone</apex:facet>
+  {!a.phone}
+  </apex:column>   
+  </apex:dataTable>    
+  </apex:pageBlock>   
+  </apex:page>

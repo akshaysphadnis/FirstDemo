@@ -1,0 +1,46 @@
+<apex:page controller="SearchJsclass">
+<apex:sectionHeader title="Account Search"/>
+<apex:form id="frm">
+    <apex:actionFunction name="doSearchJS" action="{!doSearch}"/>
+    <apex:actionFunction name="clearResultJs" action="{!clearResults}"/>
+    
+    <apex:pageBlock title="Criteria" id="Crit_pb">
+    	<apex:pageBlockSection id="Crit_pbs">
+        <apex:outputLabel value="Searchfor"></apex:outputLabel>
+        <apex:inputText id="Crit_str" value="{!searchstr}"/>
+        <apex:commandButton value="Go" onclick="runSearch();return false;"/>
+            
+        <apex:outputText style="font-style:italic">Enter atleast Two  characters</apex:outputText>        
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Result" id="results" >
+	<apex:pageBlockTable value="{!results}" var="acc" rendered="{!resultsAvailable}">
+    <apex:column value="{!acc.name}"/>
+    <apex:column value="{!acc.type}"/>
+    <apex:column value="{!acc.industry}"/>
+    </apex:pageBlockTable>    
+   
+        
+      <apex:outputPanel rendered="{!resultsAvailable}" ></apex:outputPanel>
+        <h2>No Results</h2>
+    </apex:pageBlock>
+</apex:form>    
+   <script>
+    function runSearch()
+    {
+     	var str=document.getElementById('{!$Component.frm.crit_pb.crit_pbs.crit_str}').value;
+        if(str.length>2)
+		{
+       		doSearchJs();
+        }
+        else
+        {
+        	alert('Please enter more than 2 character');
+            clearResultJs();
+    	 }
+    }
+    </script>
+    
+    
+</apex:page>

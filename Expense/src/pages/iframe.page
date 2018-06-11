@@ -1,0 +1,5 @@
+<apex:page showHeader="true">
+    <apex:pageBlock >
+        <apex:iframe src="https://www.google.com" scrolling="true" id="theIframe"/> 
+    </apex:pageBlock>
+</apex:page>

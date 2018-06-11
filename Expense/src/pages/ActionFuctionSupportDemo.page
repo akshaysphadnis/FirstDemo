@@ -1,0 +1,33 @@
+<apex:page controller="ActionFuctionSupportDemoController">
+    <apex:slds />
+  <apex:form >
+      <script>
+          function javaScriptMethod(){
+            alert('Calling Action Function');
+            myactionfun();
+          }
+      </script>
+      <apex:actionFunction name="myactionfun"  action="{!actionFunctionTest}" reRender="pgBlock, pbSection" />
+      <apex:pageBlock title="Test Action Support/Function Test">
+          <apex:pageblockSection >
+              <apex:inputText value="{!dummyString}" >
+                  <apex:actionSupport event="onchange" action="{!actionSupportTest}" reRender="pgBlock, pbSection" />
+              </apex:inputText>
+              
+              <apex:inputcheckbox onclick="javaScriptMethod();" />
+              
+          </apex:pageblockSection>
+      </apex:pageBlock>
+      <apex:pageblock title="Output of Action Funtion/Support" id="pgBlock">
+          <apex:pageblockSection id="pbSection" >
+              {!actionFunTest}
+          </apex:pageblockSection>
+      </apex:pageblock>
+      <apex:pageBlock title="Action Poller Block ">
+          <apex:pageBlockSection >
+              <apex:outputText value="Watch this counter: {!count}" id="counter"/>
+              <apex:actionPoller action="{!incrementCounter}" reRender="counter" interval="10"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

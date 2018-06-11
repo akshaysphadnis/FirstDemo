@@ -1,0 +1,18 @@
+<apex:page controller="pos">
+    <apex:form >
+        <apex:commandButton value="Click" action="{!show}"/> 
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!post}" var="a">
+        <apex:column value="{!a.Position_Title__c}"/>
+            <apex:column value="{!a.Status__c}"/>
+            <apex:column value="{!a.JobApp__r.Max_Pay__c}"/>
+            <apex:column value="{!a.JobApp__r.Min_Pay__c}"/>
+         
+           
+        
+        
+        
+        </apex:pageBlockTable>
+        </apex:pageBlock>  
+    </apex:form>
+</apex:page>

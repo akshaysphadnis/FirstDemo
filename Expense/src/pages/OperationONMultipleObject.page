@@ -1,0 +1,25 @@
+<apex:page controller="multipleObjectoperation">
+  <apex:form >
+      <apex:pageBlock >
+     <apex:pageBlockSection title="Candidate Details" >
+    <apex:outputLabel >Enter Name</apex:outputLabel>
+    <apex:inputText value="{!canFirstName}" />
+    <apex:outputLabel >Enter Last Name </apex:outputLabel>     
+    <apex:inputText value="{!canLastName}" />
+    <apex:outputLabel > Enter Email</apex:outputLabel>     
+    <apex:inputText value="{!canEmail}" />
+ </apex:pageBlockSection>
+          
+ <apex:pageBlockSection title="Position Details" >
+    <apex:outputLabel >Enter Name</apex:outputLabel>
+     <apex:inputText value="{!posName}" />
+    <apex:outputLabel >Max_pay</apex:outputLabel>
+     <apex:inputText value="{!posMax_Pay}" />
+   <apex:outputLabel >Min_Pay</apex:outputLabel>  
+    <apex:inputText value="{!posMin_Pay}" />
+ </apex:pageBlockSection>    
+          <br/>
+ <apex:commandButton action="{!Insertdata}" value="Insert" style="margin-left:300px;" />         
+      </apex:pageBlock>
+      </apex:form> 
+</apex:page>

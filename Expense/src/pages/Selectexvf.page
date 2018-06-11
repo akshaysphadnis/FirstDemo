@@ -1,0 +1,26 @@
+<apex:page controller="Selectex" >
+<apex:form >
+    <apex:pageBlock >
+        <apex:selectList size="1">
+            <apex:selectOptions value="{!myval}">
+            </apex:selectOptions>
+      		</apex:selectList>
+        <apex:selectList size="1">
+            <apex:selectOption itemLabel="java" itemValue="java"></apex:selectOption>
+        	<apex:selectOption itemLabel="eclipse" itemValue="eclipse"></apex:selectOption>
+        
+        
+        </apex:selectList>
+    
+    
+    
+    
+    </apex:pageBlock>
+    
+    
+    
+    </apex:form>    
+
+
+
+</apex:page>

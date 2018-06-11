@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style type="text/css">
+.one
+      {
+      		margin:20px;
+            padding:10px;
+            width:150px;
+            height:100px;
+            background-color:#81DAF5;
+      }
+    .outer
+      {
+            margin:20px;
+            padding:10px;
+            width:150px;
+            height:100px;
+       		background-color:#FFFFFF;     
+      }  
+     .recent
+      {
+      	 margin:20px;
+         padding:10px;
+         height:20px;
+         background-color:#81DAF5;
+      }
+</head>
+</html>   

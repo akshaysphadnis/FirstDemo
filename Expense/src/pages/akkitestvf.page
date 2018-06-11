@@ -1,0 +1,68 @@
+<apex:page controller="akkitest" >
+    <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockTable value="{!mylist}" var="a">
+     <apex:column headerValue="Name" value="{!a.name}"/>   
+        <apex:column headerValue="Age" value="{!a.age}"/>
+        <apex:column headerValue="Phone Number" value="{!a.phno}"/>
+        </apex:pageBlockTable>
+        
+    
+   </apex:pageBlock>
+        <apex:pageBlock >
+        <apex:pageBlockTable value="{!myset}" var="b">
+            <apex:column value="{!b}"/>
+           </apex:pageBlockTable>
+           </apex:pageBlock>
+
+    <apex:pageBlock >
+        
+       <apex:dataList value="{!myset}" var="c">
+           {!c}
+        </apex:dataList>
+        
+     </apex:pageBlock>
+    <apex:pageBlock >
+        <apex:selectList size="1" value="{!myval}"  >
+    <apex:selectOptions value="{!myoption}" ></apex:selectOptions>
+            <apex:actionSupport event="onchange" reRender="one"/>
+       
+        </apex:selectList>
+        
+        </apex:pageBlock>
+        <apex:pageBlock >
+        <apex:outputLabel id="one">the selected option is {!myval}</apex:outputLabel>
+        </apex:pageBlock>
+        
+        <apex:pageBlock >
+        <apex:repeat value="{!mymap}" var="d">
+            <apex:outputText value="{!d}"></apex:outputText>
+            <apex:outputText value="{!mymap[d]}"></apex:outputText><br/>
+        
+            
+            </apex:repeat>
+        
+        </apex:pageBlock>
+        <apex:pageBlock >
+        <apex:repeat value="{!mymap1}" var="e">
+            <apex:outputText value="{!e}"></apex:outputText>
+            <apex:outputText value="{!mymap1[e]}"></apex:outputText><br/>
+        
+            
+            </apex:repeat>
+        
+        </apex:pageBlock>
+        <apex:pageBlock >
+        <apex:outputLabel >eneter the value x</apex:outputLabel>
+        <apex:inputText value="{!x}"/>
+          <apex:outputLabel >eneter the value y</apex:outputLabel>
+        <apex:inputText value="{!y}"/>
+            <apex:commandButton value="Add" action="{!add}" reRender="one"/>
+            <apex:outputLabel id="one">Addition={!sum}</apex:outputLabel>
+       		<apex:commandButton value="Sub" action="{!sub}" reRender="two"/>
+            <apex:outputLabel id="two">Subtaction={!minus}</apex:outputLabel>
+       
+        </apex:pageBlock>
+    </apex:form>
+    
+    </apex:page>

@@ -1,0 +1,28 @@
+<apex:page Controller="wrapprac">
+<apex:form >
+<apex:pageBlock mode="inlineEdit">
+<apex:pageBlockButtons >
+<apex:commandButton value="show" action="{!selectclass}" reRender="x"/>    
+</apex:pageBlockButtons>
+<apex:pageBlockButtons >
+<apex:commandButton value="save" action="{!save}"/>    
+</apex:pageBlockButtons>    
+<apex:pageBlockSection >
+<apex:pageBlockTable value="{!listwrap}" var="x">
+<apex:column >
+<apex:inputCheckbox value="{!x.selected}"/>
+ </apex:column>
+ <apex:column value="{!x.a.id}"/>    
+    <apex:column value="{!x.a.name}"/>  
+</apex:pageBlockTable>
+<apex:pageBlockTable value="{!acclist}" var="a" id="x">
+ <apex:column value="{!a.id}"/>   
+ <apex:column value="{!a.name}"/>   
+    
+    
+    </apex:pageBlockTable>
+    
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

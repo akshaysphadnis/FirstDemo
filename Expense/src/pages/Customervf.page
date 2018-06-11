@@ -1,0 +1,30 @@
+<apex:page controller="CustomerList">
+    <apex:form >
+    
+        <apex:pageBlock > 
+            <apex:pageBlockTable value="{!result}" var="a">
+                <apex:column headerValue="Name" value="{!a.name}"/>
+                <apex:column headerValue="Age" value="{!a.age}"/>
+                  
+                       
+            </apex:pageBlockTable>
+        
+            <apex:selectList size="1" value="{!myval}">
+                <apex:selectOptions value="{!myoption}"/>
+            <apex:actionSupport event="onchange" reRender="one"/>
+                
+            </apex:selectList>
+            <apex:outputLabel id="one">you have selected{!myval}</apex:outputLabel>
+            
+        
+        
+        </apex:pageBlock>
+        
+        
+        
+    
+    
+    
+    </apex:form>
+    
+</apex:page>
